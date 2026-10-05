@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #16213e, #080b14 60%);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-wrapper {
+    width: 92%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #8d99ae;
+}
+
+#restartBtn {
+    background: #171d2b;
+    border: 1px solid #30394d;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#restartBtn:hover {
+    background: #222b3e;
+}
+
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    background: rgba(20, 27, 42, 0.9);
+    border: 1px solid #273148;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat span {
+    color: #8995aa;
+    font-size: 13px;
+}
+
+.stat strong {
+    font-size: 21px;
+}
+
+
+
+.game-section {
+    background: rgba(15, 21, 34, 0.9);
+    border: 1px solid #273148;
+    padding: 20px;
+    border-radius: 18px;
+}
+
+.game-board-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    aspect-ratio: 1 / 1;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    background-color: #080d17;
+
+    background-image:
+        linear-gradient(#121a2a 1px, transparent 1px),
+        linear-gradient(90deg, #121a2a 1px, transparent 1px);
+
+    background-size: 25px 25px;
+
+    border: 2px solid #26334d;
+    border-radius: 12px;
+}
+
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(4, 8, 15, 0.86);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.overlay-content {
+    padding: 30px;
+}
+
+.big-icon {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.overlay h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    color: #9aa6bb;
+    margin-bottom: 20px;
+}
+
+#finalScore {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.main-btn {
+    border: none;
+    background: #22c55e;
+    color: #04130a;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+    background: #4ade80;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.instructions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.instructions div {
+    background: #101827;
+    border: 1px solid #222d43;
+
+    padding: 13px;
+
+    border-radius: 10px;
+}
+
+.instructions strong {
+    font-size: 13px;
+}
+
+.instructions p {
+    color: #8995aa;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
+.mobile-controls {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mobile-controls button {
+    width: 55px;
+    height: 50px;
+
+    margin: 4px;
+
+    border-radius: 10px;
+
+    border: 1px solid #303b52;
+
+    background: #151e2e;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.mobile-controls button:active {
+    background: #24324a;
+}
+
+
+
+footer {
+    text-align: center;
+
+    color: #657189;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .game-wrapper {
+        width: 94%;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    #restartBtn {
+        padding: 9px 12px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+        padding: 12px;
+    }
+
+    .game-section {
+        padding: 12px;
+    }
+
+    .instructions {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-controls {
+        display: block;
+    }
+
+    .big-icon {
+        font-size: 50px;
+    }
+
+    .overlay h2 {
+        font-size: 26px;
+    }
+}

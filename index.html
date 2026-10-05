@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Rush 🐍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+        <header>
+            <div>
+                <h1>🐍 Snake Rush</h1>
+                <p>Eat the balls. Grow bigger. Beat your high score.</p>
+            </div>
+
+            <button id="restartBtn">↻ Restart</button>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat">
+                <span>🍎 Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>🏆 Best</span>
+                <strong id="best">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>🐍 Length</span>
+                <strong id="length">3</strong>
+            </div>
+
+            <div class="stat">
+                <span>⚡ Speed</span>
+                <strong id="speed">1</strong>
+            </div>
+
+        </section>
+
+        <main class="game-section">
+
+            <div class="game-board-container">
+
+                <canvas id="gameCanvas"></canvas>
+
+                <div id="startScreen" class="overlay">
+
+                    <div class="overlay-content">
+
+                        <div class="big-icon">🐍</div>
+
+                        <h2>Snake Rush</h2>
+
+                        <p>Eat the balls and become the longest snake!</p>
+
+                        <button id="startBtn" class="main-btn">
+                            🎮 Start Game
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div id="gameOverScreen" class="overlay hidden">
+
+                    <div class="overlay-content">
+
+                        <div class="big-icon">💀</div>
+
+                        <h2>Game Over!</h2>
+
+                        <p>Your final score</p>
+
+                        <strong id="finalScore">0</strong>
+
+                        <button id="playAgainBtn" class="main-btn">
+                            🔄 Play Again
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="instructions">
+
+                <div>
+                    <strong>🎮 Controls</strong>
+                    <p>Arrow Keys or WASD</p>
+                </div>
+
+                <div>
+                    <strong>🎯 Goal</strong>
+                    <p>Eat the balls and avoid yourself!</p>
+                </div>
+
+            </div>
+
+            <div class="mobile-controls">
+
+                <button data-direction="up">⬆️</button>
+
+                <div>
+                    <button data-direction="left">⬅️</button>
+                    <button data-direction="down">⬇️</button>
+                    <button data-direction="right">➡️</button>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            Snake Rush • Built with HTML, CSS & JavaScript
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
